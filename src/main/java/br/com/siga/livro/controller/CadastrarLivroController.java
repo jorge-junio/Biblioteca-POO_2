@@ -1,4 +1,4 @@
-package br.com.siga.pessoa.controller;
+package br.com.siga.livro.controller;
 
 import java.text.ParseException;
 
@@ -13,41 +13,41 @@ import br.com.siga.uteis.Uteis;
 
 //import org.junit.Test;
 
-@Named(value="cadastrarPessoaController")
+@Named(value="cadastrarlivroController")
 @RequestScoped
 public class CadastrarLivroController {
  
 	@Inject
-	LivroModel pessoaModel;
+	LivroModel livroModel;
  
 	@Inject
 	UsuarioController usuarioController;
  
 	@Inject
-	LivroRepository pessoaRepository;
+	LivroRepository livroRepository;
  
  
-	public LivroModel getPessoaModel() {
-		return pessoaModel;
+	public LivroModel getlivroModel() {
+		return livroModel;
 	}
  
-	public void setPessoaModel(LivroModel pessoaModel) {
-		this.pessoaModel = pessoaModel;
+	public void setlivroModel(LivroModel livroModel) {
+		this.livroModel = livroModel;
 	}
  
 	/**
 	 *SALVA UM NOVO REGISTRO VIA INPUT 
 	 * @throws ParseException 
 	 */
-	public void SalvarNovaPessoa() throws ParseException{
+	public void SalvarNovalivro() throws ParseException{
  
-		pessoaModel.setUsuarioModel(this.usuarioController.GetUsuarioSession());
+		livroModel.setUsuarioModel(this.usuarioController.GetUsuarioSession());
  
 		//INFORMANDO QUE O CADASTRO FOI VIA INPUT
  
-		pessoaRepository.SalvarNovoRegistro(this.pessoaModel);
+		livroRepository.SalvarNovoRegistro(this.livroModel);
  
-		this.pessoaModel = null;
+		this.livroModel = null;
  
 		Uteis.MensagemInfo("Registro cadastrado com sucesso");
  
