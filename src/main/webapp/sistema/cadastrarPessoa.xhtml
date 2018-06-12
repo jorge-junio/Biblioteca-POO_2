@@ -16,98 +16,86 @@
 	<ui:define name="content">
  
 		   <p:tabView style="width:600px;height:470px;margin:auto;">
-	 		 	<p:tab title="Cadastro de Aluno">
+	 		 	<p:tab title="Cadastro de Livro">
  
 	 		 	<h:form id="form-cadastro">	 	
  
 	 		 	<h:panelGrid id="panelGrid-campos-form" columns="2" cellpadding="10">
  
-	 		 			<p:outputLabel value="Nome" for="inputText-nome"/>
-	            		<p:inputText id="inputText-nome" 
+	 		 			<p:outputLabel value="Ano" for="inputText-ano"/>
+	            		<p:inputText id="inputText-ano" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarPessoaController.pessoaModel.nome}"
+	            				  value="#{cadastrarLivroController.livroModel.ano}"
 	            				  required="true"
-	            				  requiredMessage="O nome é de preenchimento obrigatório"/>
+	            				  requiredMessage="O ano é de preenchimento obrigatório"/>
+	            				  
+	            				  
+	            		<p:outputLabel value="Genero" for="inputText-genero"/>
+	            		<p:inputText id="inputText-genero" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarLivroController.livroModel.genero}"
+	            				  required="true"
+	            				  requiredMessage="O genero é de preenchimento obrigatório"/>
  
-	            		<p:outputLabel for="selectOneRadio-sexo" value="Sexo" />
-        				<p:selectOneRadio id="selectOneRadio-sexo" 
-        						  value="#{cadastrarPessoaController.pessoaModel.sexo}"
-        						  required="true"
-	            				     	  requiredMessage="O sexo é de preenchimento obrigatório">
- 
-            				<f:selectItem itemLabel="Masculino" itemValue="M" />
-            				<f:selectItem itemLabel="Feminino" itemValue="F" />            				
-        				</p:selectOneRadio>
-        				
-        				
-        				<p:outputLabel for="date" value="Data de nascimento " />
-       				    <p:inputMask id="date" value="#{cadastrarPessoaController.pessoaModel.data}" 
-       				    		mask="99/99/9999"
-	            			     required="true"
-	            			     requiredMessage="A data de nascimento é de preenchimento obrigatório"/>
-	            			     
- 
-	            		<p:outputLabel value="idade" for="inputNumber-idade"/>
-	            		<p:inputText id="inputNumber-idade" 
-	            			     style="width:300px" 
-	            			     maxlength="80" 
-	            			     value="#{cadastrarPessoaController.pessoaModel.idade}"
-	            			     required="true"
-	            			     requiredMessage="A idade é de preenchimento obrigatório"/>           		
- 
- 
-	            		<p:outputLabel value="Nome do pai" for="inputText-pai"/>
-	            		<p:inputText id="inputText-pai" 
-	            			     style="width:400px" 
-	            			     maxlength="70" 
-	            			     value="#{cadastrarPessoaController.pessoaModel.pai}"
-	            			     required="true"
-	            		         requiredMessage="O nome do pai é de preenchimento obrigatório"/>
-	            		             
-	            		             
-	            	    <p:outputLabel value="Nome da mãe" for="inputText-mae"/>
-	            		<p:inputText id="inputText-mae" 
-	            			     style="width:400px" 
-	            			     maxlength="70" 
-	            			     value="#{cadastrarPessoaController.pessoaModel.mae}"
-	            			     required="true"
-	            		         requiredMessage="O nome da mãe é de preenchimento obrigatório"/>
-	            		             
-	            		             
-	            		<p:outputLabel value="Telefone" for="inputText-telefone"/>
-	            		 
-	            		<p:inputMask id="inputText-telefone" 
-       				    		mask="9 9999-9999"
-	            			     style="width:400px" 
-	            			     maxlength="20" 
-	            			     value="#{cadastrarPessoaController.pessoaModel.telefone}"
-	            			     required="true"
-	            				requiredMessage="O numero de telefone é de preenchimento obrigatório"/>  
-	            		 
-	            		<!--          
-	            		<p:inputText id="inputText-telefone" 
-	            			     style="width:400px" 
-	            			     maxlength="20" 
-	            			     value="#{cadastrarPessoaController.pessoaModel.telefone}"
-	            			     required="true"
-	            		         requiredMessage="O numero de telefone é de preenchimento obrigatório"/>              
-	            		-->
+        				<p:outputLabel value="Prateleira" for="inputText-prateleira"/>
+	            		<p:inputText id="inputText-prateleira" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarLivroController.livroModel.prateleira}"
+	            				  required="true"
+	            				  requiredMessage="O prateleira é de preenchimento obrigatório"/>
+	            				  
+	            		<p:outputLabel value="Autor" for="inputText-autor"/>
+	            		<p:inputText id="inputText-autor" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarLivroController.livroModel.autor}"
+	            				  required="true"
+	            				  requiredMessage="O autor é de preenchimento obrigatório"/>
 	            		
-	            		<p:outputLabel value="Endereço" for="inputText-endereco"/>
-	            		<p:inputText id="inputText-endereco" 
-	            			     style="width:400px" 
-	            			     maxlength="20" 
-	            			     value="#{cadastrarPessoaController.pessoaModel.endereco}"
-	            			     required="true"
-	            		         requiredMessage="O endereço é de preenchimento obrigatório"/> 
-	            		         
- 
+	            		
+	            		<p:outputLabel value="Emprestado" for="inputText-emprestado"/>
+	            		<p:inputText id="inputText-emprestado" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarLivroController.livroModel.emprestado}"
+	            				  required="true"
+	            				  requiredMessage="O emprestado é de preenchimento obrigatório"/>
+	            		
+	            		
+	            		<p:outputLabel value="Isbn" for="inputText-isbn"/>
+	            		<p:inputText id="inputText-isbn" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarLivroController.livroModel.isbn}"
+	            				  required="true"
+	            				  requiredMessage="O isbn é de preenchimento obrigatório"/>
+	            				  
+	            		
+	            		<p:outputLabel value="Editora" for="inputText-editora"/>
+	            		<p:inputText id="inputText-editora" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarLivroController.livroModel.ano}"
+	            				  required="true"
+	            				  requiredMessage="A editora é de preenchimento obrigatório"/>
+	            				  
+	            		
+	            		<p:outputLabel value="Edicao" for="inputText-edicao"/>
+	            		<p:inputText id="inputText-edicao" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarLivroController.livroModel.edicao}"
+	            				  required="true"
+	            				  requiredMessage="A edição é de preenchimento obrigatório"/>
+	            				  
+	            		<p:outputLabel value="Titulo" for="inputText-titulo"/>
+	            		<p:inputText id="inputText-titulo" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarLivroController.livroModel.titulo}"
+	            				  required="true"
+	            				  requiredMessage="O titulo é de preenchimento obrigatório"/>
+	            				   
 	            		<p:spacer/>
  
 	            		<p:commandButton value="Salvar" 
 	            				 id="commandButton-salvar"
 						 icon="ui-icon-gear"
-						 actionListener="#{cadastrarPessoaController.SalvarNovaPessoa}"
+						 actionListener="#{cadastrarLivroController.SalvarNovoLivro}"
 						 update="panelGrid-campos-form"/>
  
  

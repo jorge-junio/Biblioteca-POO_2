@@ -22,10 +22,10 @@ public class UsuarioEntity implements Serializable {
 	@Column(name="id_usuario")
 	private String codigo;
  
-	@Column(name="ds_login")
+	@Column(name="login")
 	private String usuario;
  
-	@Column(name="ds_senha")
+	@Column(name="senha")
 	private String senha;
  
 	public String getCodigo() {
