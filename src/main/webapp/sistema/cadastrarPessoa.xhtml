@@ -25,7 +25,7 @@
 	 		 			<p:outputLabel value="Ano" for="inputText-ano"/>
 	            		<p:inputText id="inputText-ano" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.ano}"
+	            				  value="#{cadastrarlivroController.livroModel.ano}"
 	            				  required="true"
 	            				  requiredMessage="O ano é de preenchimento obrigatório"/>
 	            				  
@@ -33,21 +33,21 @@
 	            		<p:outputLabel value="Genero" for="inputText-genero"/>
 	            		<p:inputText id="inputText-genero" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.genero}"
+	            				  value="#{cadastrarlivroController.livroModel.genero}"
 	            				  required="true"
 	            				  requiredMessage="O genero é de preenchimento obrigatório"/>
  
         				<p:outputLabel value="Prateleira" for="inputText-prateleira"/>
 	            		<p:inputText id="inputText-prateleira" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.prateleira}"
+	            				  value="#{cadastrarlivroController.livroModel.prateleira}"
 	            				  required="true"
 	            				  requiredMessage="O prateleira é de preenchimento obrigatório"/>
 	            				  
 	            		<p:outputLabel value="Autor" for="inputText-autor"/>
 	            		<p:inputText id="inputText-autor" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.autor}"
+	            				  value="#{cadastrarlivroController.livroModel.autor}"
 	            				  required="true"
 	            				  requiredMessage="O autor é de preenchimento obrigatório"/>
 	            		
@@ -55,7 +55,7 @@
 	            		<p:outputLabel value="Emprestado" for="inputText-emprestado"/>
 	            		<p:inputText id="inputText-emprestado" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.emprestado}"
+	            				  value="#{cadastrarlivroController.livroModel.emprestado}"
 	            				  required="true"
 	            				  requiredMessage="O emprestado é de preenchimento obrigatório"/>
 	            		
@@ -63,7 +63,7 @@
 	            		<p:outputLabel value="Isbn" for="inputText-isbn"/>
 	            		<p:inputText id="inputText-isbn" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.isbn}"
+	            				  value="#{cadastrarlivroController.livroModel.isbn}"
 	            				  required="true"
 	            				  requiredMessage="O isbn é de preenchimento obrigatório"/>
 	            				  
@@ -71,7 +71,7 @@
 	            		<p:outputLabel value="Editora" for="inputText-editora"/>
 	            		<p:inputText id="inputText-editora" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.ano}"
+	            				  value="#{cadastrarlivroController.livroModel.editora}"
 	            				  required="true"
 	            				  requiredMessage="A editora é de preenchimento obrigatório"/>
 	            				  
@@ -79,14 +79,14 @@
 	            		<p:outputLabel value="Edicao" for="inputText-edicao"/>
 	            		<p:inputText id="inputText-edicao" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.edicao}"
+	            				  value="#{cadastrarlivroController.livroModel.edicao}"
 	            				  required="true"
 	            				  requiredMessage="A edição é de preenchimento obrigatório"/>
 	            				  
 	            		<p:outputLabel value="Titulo" for="inputText-titulo"/>
 	            		<p:inputText id="inputText-titulo" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarLivroController.livroModel.titulo}"
+	            				  value="#{cadastrarlivroController.livroModel.titulo}"
 	            				  required="true"
 	            				  requiredMessage="O titulo é de preenchimento obrigatório"/>
 	            				   
@@ -95,7 +95,7 @@
 	            		<p:commandButton value="Salvar" 
 	            				 id="commandButton-salvar"
 						 icon="ui-icon-gear"
-						 actionListener="#{cadastrarLivroController.SalvarNovoLivro}"
+						 actionListener="#{cadastrarlivroController.SalvarNovalivro}"
 						 update="panelGrid-campos-form"/>
  
  

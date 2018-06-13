@@ -28,18 +28,18 @@
 		<h:form style="margin:auto;margin-left:2%;" id="form-consulta">
  
 			<p:dataTable id="dataTable-registros"
-						 var="pessoa" 
-						 value="#{consultarPessoaController.pessoas}" 
+						 var="livro" 
+						 value="#{consultarlivroController.livros}" 
 						 rows="15"
 						 paginator="true"
 						 paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowsPerPageTemplate="5,10,15"
                          style="width:98%;">
  
-						 <p:column headerText="Matricula" style="width:70px;">
-            				<h:outputText value="#{pessoa.codigo}" />
+						 <p:column headerText="Ano" style="width:70px;">
+            				<h:outputText value="#{livro.ano}" />
         				 </p:column>
- 
+ <!-- 
         				 <p:column headerText="Nome" style="width:70px;">
             				<h:outputText value="#{pessoa.nome}" />
         				 </p:column>
@@ -86,12 +86,12 @@
        				 <p:column headerText="Usuário Que Cadastrou" style="width:70px;">
             				<h:outputText value="#{pessoa.usuarioModel.usuario}" />
         				 </p:column>
- 
+ --> 
         				 <p:column headerText="" style="width:25px;">
         				 <p:commandButton icon="ui-icon-pencil" 
         				    				    title="Editar Aluno"                        					 
                         					    ajax="true"                        					 
-                        					    actionListener="#{consultarPessoaController.Editar(pessoa)}"
+                        					    actionListener="#{consultarlivroController.Editar(livros)}"
                         					    oncomplete="PF('dialog-modal-editar').show();" 
                         					    update="dialog-modal-editar"/>
  
