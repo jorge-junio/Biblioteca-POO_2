@@ -14,7 +14,7 @@
 <ui:composition template="/template/layoutBase.xhtml">
  
 	<ui:define name="content">
-		 <p:dialog header="Editar cadastro do Aluno" 
+		 <p:dialog header="Editar cadastro do Livro" 
 				  		id="dialog-modal-editar" 
 		   		 		 widgetVar="dialog-modal-editar" 
 		   		 		 modal="true" 
@@ -89,7 +89,7 @@
  --> 
         				 <p:column headerText="" style="width:25px;">
         				 <p:commandButton icon="ui-icon-pencil" 
-        				    				    title="Editar Aluno"                        					 
+        				    				    title="Editar Livro"                        					 
                         					    ajax="true"                        					 
                         					    actionListener="#{consultarlivroController.Editar(livros)}"
                         					    oncomplete="PF('dialog-modal-editar').show();" 
@@ -102,7 +102,7 @@
         				 <p:commandButton icon="ui-icon-trash" 
         				    		     title="Excluir Registro"                        					 
                         					 ajax="true"
-                        					 actionListener="#{consultarPessoaController.ExcluirPessoa(pessoa)}"
+                        					 actionListener="#{consultarlivroController.ExcluirLivro(livro)}"
                         					 update="@form" />
  
         				 </p:column>

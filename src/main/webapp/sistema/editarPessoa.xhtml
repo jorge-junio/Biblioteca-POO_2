@@ -10,87 +10,33 @@
        
        					<p:outputLabel value="Código" for="inputText-nome"/>
 							 <p:inputText   id="inputText-codigo"
-	 							value="#{consultarPessoaController.pessoaModel.codigo}"
+	 							value="#{cadastrarlivroController.livroModel.codigo}"
 	 							style="width:50px"
 	 							readonly="true"/>
- 
-						 <p:outputLabel value="Nome" for="inputText-nome"/>
+ 						
+ 						<p:outputLabel value="Ano" for="inputText-ano"/>
+	            		<p:inputText id="inputText-ano" 
+	            				  style="width:300px" maxlength="70" 
+	            				  value="#{cadastrarlivroController.livroModel.ano}"
+	            				  required="true"
+	            				  requiredMessage="O ano é de preenchimento obrigatório"/>
+	            				  
+						 <p:outputLabel value="Ano" for="inputText-nome"/>
 	            		<p:inputText id="inputText-nome" 
 	            				  style="width:300px" maxlength="70" 
-	            				  value="#{consultarPessoaController.pessoaModel.nome}"
+	            				  value="#{cadastrarlivroController.livroModel.ano}"
 	            				  required="true"
 	            				  requiredMessage="O nome é de preenchimento obrigatório"/>
- 
-	            		<p:outputLabel for="selectOneRadio-sexo" value="Sexo" />
-        				<p:selectOneRadio id="selectOneRadio-sexo" 
-        						  value="#{consultarPessoaController.pessoaModel.sexo}"
-        						  required="true"
-	            				     	  requiredMessage="O sexo é de preenchimento obrigatório">
- 
-            				<f:selectItem itemLabel="Masculino" itemValue="M" />
-            				<f:selectItem itemLabel="Feminino" itemValue="F" />            				
-        				</p:selectOneRadio>
-        				
-        				
-        				<p:outputLabel for="date" value="Data de nascimento " />
-       				    <p:inputMask id="date" value="#{consultarPessoaController.pessoaModel.data}" 
-       				    		mask="99/99/9999"
-	            			     required="true"
-	            			     requiredMessage="A data de nascimento é de preenchimento obrigatório"/>
 	            			     
  
 	            		<p:outputLabel value="idade" for="inputNumber-idade"/>
 	            		<p:inputText id="inputNumber-idade" 
 	            			     style="width:300px" 
 	            			     maxlength="80" 
-	            			     value="#{consultarPessoaController.pessoaModel.idade}"
+	            			     value="#{cadastrarlivroController.livroModel.ano}"
 	            			     required="true"
 	            			     requiredMessage="A idade é de preenchimento obrigatório"/>           		
  
- 
-	            		<p:outputLabel value="Nome do pai" for="inputText-pai"/>
-	            		<p:inputText id="inputText-pai" 
-	            			     style="width:400px" 
-	            			     maxlength="70" 
-	            			     value="#{consultarPessoaController.pessoaModel.pai}"
-	            			     required="true"
-	            		         requiredMessage="O nome do pai é de preenchimento obrigatório"/>
-	            		             
-	            		             
-	            	    <p:outputLabel value="Nome da mãe" for="inputText-mae"/>
-	            		<p:inputText id="inputText-mae" 
-	            			     style="width:400px" 
-	            			     maxlength="70" 
-	            			     value="#{consultarPessoaController.pessoaModel.mae}"
-	            			     required="true"
-	            		         requiredMessage="O nome da mãe é de preenchimento obrigatório"/>
-	            		             
-	            		             
-	            		<p:outputLabel value="Telefone" for="inputText-telefone"/>
-	            		<p:inputMask id="inputText-telefone"
-	            				 mask="9 9999-9999" 
-	            			     style="width:400px" 
-	            			     maxlength="20" 
-	            			     value="#{consultarPessoaController.pessoaModel.telefone}"
-	            			     required="true"
-	            		         requiredMessage="O numero de telefone é de preenchimento obrigatório"/>  
-	            		<!-- 
-	            		<p:inputMask id="inputText-telefone" 
-       				    		mask="9 9999-9999"
-	            			     style="width:400px" 
-	            			     maxlength="20" 
-	            			     value="#{cadastrarPessoaController.pessoaModel.telefone}"
-	            			     required="true"
-	            				requiredMessage="O numero de telefone é de preenchimento obrigatório"/>
-	            		 -->
-	            		         
-	            		<p:outputLabel value="Endereço" for="inputText-endereco"/>
-	            		<p:inputText id="inputText-endereco" 
-	            			     style="width:400px" 
-	            			     maxlength="20" 
-	            			     value="#{consultarPessoaController.pessoaModel.endereco}"
-	            			     required="true"
-	            		         requiredMessage="O endereço é de preenchimento obrigatório"/> 
  
  		<p:spacer/>
 	<p:commandButton value="Alterar" 

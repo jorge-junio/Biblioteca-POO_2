@@ -1,3 +1,4 @@
+DROP DATABASE booksystem;
 CREATE DATABASE IF NOT EXISTS booksystem;
 USE booksystem;
 
@@ -18,10 +19,10 @@ CREATE TABLE livro(
 	editora       VARCHAR(70)  NOT NULL,
 	edicao        BIGINT  NOT NULL,
 	titulo        VARCHAR(70)  NOT NULL,
-    dt_cadastro         DATETIME     NOT NULL COMMENT 'DATA DE CADASTRO DO REGISTRO',
-    id_usuario_cadastro	INT	     NOT NULL COMMENT  'USUÁRIO LOGADO QUE CADASTROU O LIVRO',
+    dt_cadastro         DATETIME COMMENT 'DATA DE CADASTRO DO REGISTRO',
+    id_usuario_cadastro	INT NOT NULL COMMENT  'USUÁRIO LOGADO QUE CADASTROU O LIVRO',
     PRIMARY KEY (id),
-    FOREIGN KEY (id_usuario_cadastro) REFERENCES usuario(id_usuario) 
+    FOREIGN KEY (id_usuario_cadastro) REFERENCES tb_usuario(id_usuario) 
 );
 
 CREATE TABLE cliente(
