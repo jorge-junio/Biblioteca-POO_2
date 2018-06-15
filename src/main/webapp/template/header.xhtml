@@ -6,15 +6,16 @@
  
 	<h:form>
  
-		<p:menubar>
-			<p:menuitem value="Home" icon="ui-icon-home" url = "home.xhtml" />
-			<p:menuitem value="Cadastro" icon="ui-icon-document" url ="cadastrarLivro.xhtml" />
-			<p:menuitem value="Consulta" icon="ui-icon-document" url ="consultarLivro.xhtml" />
+		<p:menubar >
+			<p:menuitem value="Home" icon="ui-icon-home" url = "home.xhtml" class="top" />
+			<p:menuitem value="Cadastro" icon="ui-icon-document" url ="cadastrarLivro.xhtml" class="top" />
+			<p:menuitem value="Consulta" icon="ui-icon-document" url ="consultarLivro.xhtml" class="top" />
 		
  
  
 		<f:facet name="options">            
-            	        <p:commandButton value="Logout" icon="ui-icon-extlink" action="#{usuarioController.Logout}"/>
+            	        <p:commandButton class="top" value="Logout" icon="ui-icon-extlink" 
+            	        action="#{usuarioController.Logout}" style="padding:3px;" />
         	</f:facet>
 		</p:menubar>
  

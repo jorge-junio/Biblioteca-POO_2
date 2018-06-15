@@ -15,7 +15,7 @@
  
 	<ui:define name="content">
  
-		   <p:tabView style="width:600px;height:470px;margin:auto;">
+		   <p:tabView style="width:600px;height:520px;margin:auto;">
 	 		 	<p:tab title="Cadastro de Livro">
  
 	 		 	<h:form id="form-cadastro">	 	
@@ -92,11 +92,10 @@
 	            				   
 	            		<p:spacer/>
  
-	            		<p:commandButton value="Salvar" 
-	            				 id="commandButton-salvar"
-						 icon="ui-icon-gear"
-						 actionListener="#{cadastrarlivroController.SalvarNovoLivro}"
-						 update="panelGrid-campos-form"/>
+							<p:commandButton value="Salvar" 
+	            			id="commandButton-salvar"
+							 actionListener="#{cadastrarlivroController.SalvarNovoLivro}"
+						 	update="panelGrid-campos-form" class="btn" style="margin-left:25%" />
  
  
 	 		 	</h:panelGrid>
