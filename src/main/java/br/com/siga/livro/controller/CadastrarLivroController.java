@@ -39,7 +39,7 @@ public class CadastrarLivroController {
 	 *SALVA UM NOVO REGISTRO VIA INPUT 
 	 * @throws ParseException 
 	 */
-	public void SalvarNovalivro() throws ParseException{
+	public void SalvarNovoLivro() throws ParseException{
  
 		livroModel.setUsuarioModel(this.usuarioController.GetUsuarioSession());
  

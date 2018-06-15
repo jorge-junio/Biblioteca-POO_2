@@ -1,81 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- 
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
  
-<h:head>
-</h:head>
+    <h:form>
  
-<ui:composition template="/template/layoutBase.xhtml">
- 
- 
-	<ui:define name="content">
- 
-		   <p:tabView style="width:600px;height:470px;margin:auto;">
-	 		 	<p:tab title="Cadastro de Livro">
- 
-	 		 	<h:form id="form-cadastro">	 	
- 
-	 		 	<h:panelGrid id="panelGrid-campos-form" columns="2" cellpadding="10">
- 
-	 		 			<p:outputLabel value="Ano" for="inputText-ano"/>
+       <h:panelGrid id="panelGrid-campos-form" columns="2" cellpadding="10">
+       
+       					<p:outputLabel value="Código" for="inputText-codigo"/>
+						<p:inputText   id="inputText-codigo"
+	 							value="#{cadastrarlivroController.livroModel.codigo}"
+	 							style="width:50px"
+	 							readonly="true"/>
+ 						
+ 						<p:outputLabel value="Ano" for="inputText-ano"/>
 	            		<p:inputText id="inputText-ano" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.ano}"
 	            				  required="true"
 	            				  requiredMessage="O ano é de preenchimento obrigatório"/>
 	            				  
-	            				  
-	            		<p:outputLabel value="Genero" for="inputText-genero"/>
+						 <p:outputLabel value="Genero" for="inputText-genero"/>
 	            		<p:inputText id="inputText-genero" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.genero}"
 	            				  required="true"
 	            				  requiredMessage="O genero é de preenchimento obrigatório"/>
- 
-        				<p:outputLabel value="Prateleira" for="inputText-prateleira"/>
+	            				  
+	            		<p:outputLabel value="Prateleira" for="inputText-prateleira"/>
 	            		<p:inputText id="inputText-prateleira" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.prateleira}"
 	            				  required="true"
-	            				  requiredMessage="O prateleira é de preenchimento obrigatório"/>
-	            				  
-	            		<p:outputLabel value="Autor" for="inputText-autor"/>
+	            				  requiredMessage="A prateleira é de preenchimento obrigatório"/>
+	            			     
+ 						<p:outputLabel value="Autor" for="inputText-autor"/>
 	            		<p:inputText id="inputText-autor" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.autor}"
 	            				  required="true"
 	            				  requiredMessage="O autor é de preenchimento obrigatório"/>
-	            		
-	            		
+	            				  
 	            		<p:outputLabel value="Emprestado" for="inputText-emprestado"/>
 	            		<p:inputText id="inputText-emprestado" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.emprestado}"
 	            				  required="true"
 	            				  requiredMessage="O emprestado é de preenchimento obrigatório"/>
-	            		
-	            		
+	            				  	  
 	            		<p:outputLabel value="Isbn" for="inputText-isbn"/>
 	            		<p:inputText id="inputText-isbn" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.isbn}"
 	            				  required="true"
-	            				  requiredMessage="O isbn é de preenchimento obrigatório"/>
-	            				  
-	            		
-	            		<p:outputLabel value="Editora" for="inputText-editora"/>
+	            				  requiredMessage="O isbn é de preenchimento obrigatório"/>           		
+ 
+ 						<p:outputLabel value="Editora" for="inputText-editora"/>
 	            		<p:inputText id="inputText-editora" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.editora}"
 	            				  required="true"
 	            				  requiredMessage="A editora é de preenchimento obrigatório"/>
 	            				  
-	            		
 	            		<p:outputLabel value="Edicao" for="inputText-edicao"/>
 	            		<p:inputText id="inputText-edicao" 
 	            				  style="width:300px" maxlength="70" 
@@ -83,41 +70,24 @@
 	            				  required="true"
 	            				  requiredMessage="A edição é de preenchimento obrigatório"/>
 	            				  
-	            		<p:outputLabel value="Titulo" for="inputText-titulo"/>
+	            		<p:outputLabel value="Título" for="inputText-titulo"/>
 	            		<p:inputText id="inputText-titulo" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.titulo}"
 	            				  required="true"
 	            				  requiredMessage="O titulo é de preenchimento obrigatório"/>
-	            				   
-	            		<p:spacer/>
+ 		<p:spacer/>
+	<p:commandButton value="Alterar" 
+	            	 id="commandButton-alterar"
+			 icon="ui-icon-gear"
+	   actionListener="#{consultarlivroController.AlterarRegistro}"							 
+			 oncomplete="PF('dialog-modal-editar').hide();"
+		         update="form-consulta"/> 
+        <p:spacer/>
+	<p:messages showDetail="false" autoUpdate="true" closable="true" severity="error"/>
  
-	            		<p:commandButton value="Salvar" 
-	            				 id="commandButton-salvar"
-						 icon="ui-icon-gear"
-						 actionListener="#{cadastrarlivroController.SalvarNovoLivro}"
-						 update="panelGrid-campos-form"/>
+     </h:panelGrid>                  
  
- 
-	 		 	</h:panelGrid>
- 
-	 		 		<p:messages showDetail="true" autoUpdate="true" closable="true" severity="warn"/>
-	 		 		<p:messages autoUpdate="true" closable="true" severity="error"/>		
-		   			<p:messages showDetail="true" autoUpdate="true" closable="true" severity="info"/>
- 
-	 		 		</h:form>
- 
-	 			 </p:tab>		 		
- 
-	 		</p:tabView>
- 
- 
- 
- 
- 
-	</ui:define>
+    </h:form>
  
 </ui:composition>
- 
- 
-</html>

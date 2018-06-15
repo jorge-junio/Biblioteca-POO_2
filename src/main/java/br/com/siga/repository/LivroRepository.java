@@ -93,7 +93,6 @@ public class LivroRepository {
 			livroModel.setEditora(livroEntity.getEditora());
 			livroModel.setEdicao(livroEntity.getEdicao());
 			livroModel.setTitulo(livroEntity.getTitulo());
-			livroModel.setDataCad(livroEntity.getDataCad());
 
 			UsuarioEntity usuarioEntity = livroEntity.getUsuarioEntity();
 

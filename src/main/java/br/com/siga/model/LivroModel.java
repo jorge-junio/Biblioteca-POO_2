@@ -1,9 +1,6 @@
 package br.com.siga.model;
 
 
-import java.time.LocalDateTime;
-
-
 public class LivroModel {
 	
 	private Integer         codigo;
@@ -16,7 +13,6 @@ public class LivroModel {
 	private String          editora;
 	private Integer         edicao;
 	private String          titulo;
-	private LocalDateTime	dataCad;
 	private UsuarioModel   usuarioModel;
 	
 	
@@ -79,12 +75,6 @@ public class LivroModel {
 	}
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
-	}
-	public LocalDateTime getDataCad() {
-		return dataCad;
-	}
-	public void setDataCad(LocalDateTime dataCad) {
-		this.dataCad = dataCad;
 	}
 	public UsuarioModel getUsuarioModel() {
 		return usuarioModel;
