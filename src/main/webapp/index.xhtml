@@ -22,28 +22,27 @@
  
 		    <p:panel id="panel-login-principal" 
 		    		 header="Login" 
-		    		 footer="SIGA" 
-		    		 style="width:400px;">
+		    		 footer="BookSystem" 
+		    		 style="width:400px;background:#1E90FF;margin-bottom:20px;padding:0px;" >
  
 	        	<h:panelGrid columns="2" cellpadding="10">
  
-	            	<p:graphicImage url="/resources/imagens/loked.png" />
+	            	<p:graphicImage url="/resources/imagens/book.png" style="width:100px;height:100px;" />
  
 	            	<h:panelGrid columns="2" cellpadding="5">
-	            		<p:outputLabel value="Login"/>
+	            		<p:outputLabel value="Login" class="asa" />
 	            		<p:inputText id="inputText-login" 
 	            			     value="#{usuarioController.usuarioModel.usuario}"/>
  
-	            		<p:outputLabel value="Senha"/>
+	            		<p:outputLabel value="Senha" class="asa" />
 	            		<p:password id="password-usuario" 
 	            			    value="#{usuarioController.usuarioModel.senha}"/>
  
 	            		&nbsp;
-	            		<p:commandButton value="Acessar" 
-	            				 id="commandButton-acessar"
-						 icon="ui-icon-gear"
+	            		<p:commandButton value="Acessar" id="commandButton-acessar"
 						 action="#{usuarioController.EfetuarLogin}"
-						 update="growl-mensagem" />
+						 update="growl-mensagem"
+						 styleClass="ui-priority-primary" style="margin-left:25%" />
  
 	            	</h:panelGrid>
  
