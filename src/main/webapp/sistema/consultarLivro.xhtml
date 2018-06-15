@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:format="http://siga.com.br/LocalDateTimeConverter">
+
+<h:head>
+</h:head>
+
+<ui:composition template="/template/layoutBase.xhtml">
+
+	<ui:define name="content">
+		<p:dialog header="Editar cadastro do Livro" id="dialog-modal-editar"
+			widgetVar="dialog-modal-editar" modal="true" height="450px"
+			width="600px">
+
+			<ui:include src="/sistema/editarPessoa.xhtml" />
+
+
+		</p:dialog>
+		<h:form style="margin:auto;margin-left:2%;" id="form-consulta">
+
+			<p:dataTable id="dataTable-registros" var="livro"
+				value="#{consultarlivroController.livros}" rows="15"
+				paginator="true"
+				paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+				rowsPerPageTemplate="5,10,15" style="width:98%;">
+
+
+				<p:column headerText="Genero" style="width:70px;">
+					<h:outputText value="#{livro.genero}" />
+				</p:column>
+
+				<p:column headerText="Titulo" style="width:70px;">
+					<h:outputText value="#{livro.titulo}" />
+
+				</p:column>
+
+
+				<p:column headerText="Ano" style="width:70px;">
+					<h:outputText value="#{livro.ano}" />
+				</p:column>
+
+
+				<p:column headerText="Prateleira" style="width:70px;">
+					<h:outputText value="#{livro.prateleira}" />
+				</p:column>
+
+				<p:column headerText="Autor" style="width:100px;">
+					<h:outputText value="#{livro.autor}">
+
+					</h:outputText>
+				</p:column>
+
+				<p:column headerText="Emprestado" style="width:70px;">
+					<h:outputText value="#{livro.emprestado}" />
+				</p:column>
+
+				<p:column headerText="Isbn" style="width:70px;">
+					<h:outputText value="#{livro.isbn}" />
+				</p:column>
+
+				<p:column headerText="Editora" style="width:70px;">
+					<h:outputText value="#{livro.editora}" />
+				</p:column>
+
+				<p:column headerText="Edicao" style="width:70px;">
+					<h:outputText value="#{livro.edicao}" />
+
+				</p:column>
+
+
+
+
+				<p:column headerText="Editar" style="width:25px;">
+					<p:commandButton icon="ui-icon-pencil" title="Editar Livro"
+						ajax="true"
+						actionListener="#{consultarlivroController.Editar(livros)}"
+						oncomplete="PF('dialog-modal-editar').show();"
+						update="dialog-modal-editar" />
+
+
+				</p:column>
+
+				<p:column headerText="Excluir" style="width:15px;">
+					<p:commandButton icon="ui-icon-trash" title="Excluir Registro"
+						ajax="true"
+						actionListener="#{consultarlivroController.ExcluirLivro(livro)}"
+						update="@form" />
+
+				</p:column>
+
+			</p:dataTable>
+
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>
+</html>
