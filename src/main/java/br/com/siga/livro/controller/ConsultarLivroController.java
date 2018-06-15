@@ -35,8 +35,8 @@ public class ConsultarLivroController implements Serializable {
 	public void setlivros(List<LivroModel> livros) {
 		this.livros = livros;
 	}		
-	public LivroModel getlivroModel() {
-		return livroModel;
+	public LivroModel getLivroModel() {
+		return this.livroModel;
 	}
 	public void setLivroModel(LivroModel livroModel) {
 		this.livroModel = livroModel;
@@ -57,7 +57,6 @@ public class ConsultarLivroController implements Serializable {
 	 * @param livroModel
 	 */
 	public void Editar(LivroModel livroModel){
- 
 		this.livroModel = livroModel;
  
 	}
