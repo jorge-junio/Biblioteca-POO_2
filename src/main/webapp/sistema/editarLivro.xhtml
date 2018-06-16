@@ -3,91 +3,81 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
- 
-    <h:form>
- 
-       <h:panelGrid id="panelGrid-campos-form" columns="2" cellpadding="10">
-       
-       					<p:outputLabel value="Código" for="inputText-codigo"/>
-						<p:inputText   id="inputText-codigo"
-	 							value="#{cadastrarlivroController.livroModel.codigo}"
-	 							style="width:50px"
-	 							readonly="true"/>
- 						
- 						<p:outputLabel value="Ano" for="inputText-ano"/>
-	            		<p:inputText id="inputText-ano" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.ano}"
-	            				  required="true"
-	            				  requiredMessage="O ano é de preenchimento obrigatório"/>
-	            				  
-						 <p:outputLabel value="Genero" for="inputText-genero"/>
-	            		<p:inputText id="inputText-genero" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.genero}"
-	            				  required="true"
-	            				  requiredMessage="O genero é de preenchimento obrigatório"/>
-	            				  
-	            		<p:outputLabel value="Prateleira" for="inputText-prateleira"/>
-	            		<p:inputText id="inputText-prateleira" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.prateleira}"
-	            				  required="true"
-	            				  requiredMessage="A prateleira é de preenchimento obrigatório"/>
-	            			     
- 						<p:outputLabel value="Autor" for="inputText-autor"/>
-	            		<p:inputText id="inputText-autor" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.autor}"
-	            				  required="true"
-	            				  requiredMessage="O autor é de preenchimento obrigatório"/>
-	            				  
-	            		<p:outputLabel value="Emprestado" for="inputText-emprestado"/>
-	            		<p:inputText id="inputText-emprestado" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.emprestado}"
-	            				  required="true"
-	            				  requiredMessage="O emprestado é de preenchimento obrigatório"/>
-	            				  	  
-	            		<p:outputLabel value="Isbn" for="inputText-isbn"/>
-	            		<p:inputText id="inputText-isbn" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.isbn}"
-	            				  required="true"
-	            				  requiredMessage="O isbn é de preenchimento obrigatório"/>           		
- 
- 						<p:outputLabel value="Editora" for="inputText-editora"/>
-	            		<p:inputText id="inputText-editora" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.editora}"
-	            				  required="true"
-	            				  requiredMessage="A editora é de preenchimento obrigatório"/>
-	            				  
-	            		<p:outputLabel value="Edicao" for="inputText-edicao"/>
-	            		<p:inputText id="inputText-edicao" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.edicao}"
-	            				  required="true"
-	            				  requiredMessage="A edição é de preenchimento obrigatório"/>
-	            				  
-	            		<p:outputLabel value="Título" for="inputText-titulo"/>
-	            		<p:inputText id="inputText-titulo" 
-	            				  style="width:300px" maxlength="70" 
-	            				  value="#{cadastrarlivroController.livroModel.titulo}"
-	            				  required="true"
-	            				  requiredMessage="O titulo é de preenchimento obrigatório"/>
- 		<p:spacer/>
-	<p:commandButton value="Alterar" 
-	            	 id="commandButton-alterar"
-			 icon="ui-icon-gear"
-	   actionListener="#{consultarlivroController.AlterarRegistro}"							 
-			 oncomplete="PF('dialog-modal-editar').hide();"
-		         update="form-consulta"/> 
-        <p:spacer/>
-	<p:messages showDetail="false" autoUpdate="true" closable="true" severity="error"/>
- 
-     </h:panelGrid>                  
- 
-    </h:form>
- 
+
+	<h:form>
+
+		<h:panelGrid id="panelGrid-campos-form" columns="2" cellpadding="10">
+
+			<p:outputLabel value="Código" for="inputText-codigo" />
+			<p:inputText id="inputText-codigo"
+				value="#{consultarlivroController.livroModel.codigo}"
+				style="width:50px" readonly="true" />
+
+			<p:outputLabel value="Ano" for="inputText-ano" />
+			<p:inputText id="inputText-ano" style="width:300px" maxlength="70"
+				value="#{consultarlivroController.livroModel.ano}" required="true"
+				requiredMessage="O ano é de preenchimento obrigatório" />
+
+			<p:outputLabel value="Genero" for="inputText-genero" />
+			<p:inputText id="inputText-genero" style="width:300px" maxlength="70"
+				value="#{consultarlivroController.livroModel.genero}"
+				required="true"
+				requiredMessage="O genero é de preenchimento obrigatório" />
+
+			<p:outputLabel value="Prateleira" for="inputText-prateleira" />
+			<p:inputText id="inputText-prateleira" style="width:300px"
+				maxlength="70"
+				value="#{consultarlivroController.livroModel.prateleira}"
+				required="true"
+				requiredMessage="A prateleira é de preenchimento obrigatório" />
+
+			<p:outputLabel value="Autor" for="inputText-autor" />
+			<p:inputText id="inputText-autor" style="width:300px" maxlength="70"
+				value="#{consultarlivroController.livroModel.autor}" required="true"
+				requiredMessage="O autor é de preenchimento obrigatório" />
+
+			<p:outputLabel value="Emprestado" for="inputText-emprestado" />
+			<p:inputText id="inputText-emprestado" style="width:300px"
+				maxlength="70"
+				value="#{consultarlivroController.livroModel.emprestado}"
+				required="true"
+				requiredMessage="O emprestado é de preenchimento obrigatório" />
+
+			<p:outputLabel value="Isbn" for="inputText-isbn" />
+			<p:inputText id="inputText-isbn" style="width:300px" maxlength="70"
+				value="#{consultarlivroController.livroModel.isbn}" required="true"
+				requiredMessage="O isbn é de preenchimento obrigatório" />
+
+			<p:outputLabel value="Editora" for="inputText-editora" />
+			<p:inputText id="inputText-editora" style="width:300px"
+				maxlength="70"
+				value="#{consultarlivroController.livroModel.editora}"
+				required="true"
+				requiredMessage="A editora é de preenchimento obrigatório" />
+
+			<p:outputLabel value="Edicao" for="inputText-edicao" />
+			<p:inputText id="inputText-edicao" style="width:300px" maxlength="70"
+				value="#{consultarlivroController.livroModel.edicao}"
+				required="true"
+				requiredMessage="A edição é de preenchimento obrigatório" />
+
+			<p:outputLabel value="Título" for="inputText-titulo" />
+			<p:inputText id="inputText-titulo" style="width:300px" maxlength="70"
+				value="#{consultarlivroController.livroModel.titulo}"
+				required="true"
+				requiredMessage="O titulo é de preenchimento obrigatório" />
+			<p:spacer />
+			<p:commandButton value="Alterar" id="commandButton-alterar"
+				icon="ui-icon-gear"
+				actionListener="#{consultarlivroController.AlterarRegistro}"
+				oncomplete="PF('dialog-modal-editar').hide();"
+				update="form-consulta" />
+			<p:spacer />
+			<p:messages showDetail="false" autoUpdate="true" closable="true"
+				severity="error" />
+
+		</h:panelGrid>
+
+	</h:form>
+
 </ui:composition>
