@@ -32,7 +32,7 @@ public class LivroRepository {
 	 */
 	public void SalvarNovoRegistro(LivroModel livroModel) throws ParseException {
 
-		entityManager = Uteis.JpaEntityManager();
+		entityManager = Uteis.getConexao();
 		entityManager.getTransaction().begin();
 		
 		
@@ -71,7 +71,7 @@ public class LivroRepository {
 
 		List<LivroModel> livrosModel = new ArrayList<LivroModel>();
 
-		entityManager = Uteis.JpaEntityManager();
+		entityManager = Uteis.getConexao();
 
 		Query query = entityManager.createNamedQuery("LivroEntity.findAll");
 
@@ -116,7 +116,7 @@ public class LivroRepository {
 	 */
 	private LivroEntity GetLivro(int codigo) {
 
-		entityManager = Uteis.JpaEntityManager();
+		entityManager = Uteis.getConexao();
 
 		return entityManager.find(LivroEntity.class, codigo);
 	}
@@ -130,7 +130,7 @@ public class LivroRepository {
 	public void AlterarRegistro(LivroModel livroModel) throws ParseException {
 		EntityManager entityManager = null;
 		try {
-			entityManager = Uteis.JpaEntityManager();
+			entityManager = Uteis.getConexao();
 			entityManager.getTransaction().begin();
 
 			
@@ -170,7 +170,7 @@ public class LivroRepository {
 	 */
 	public void ExcluirRegistro(int codigo) {
 		try {
-			entityManager = Uteis.JpaEntityManager();
+			entityManager = Uteis.getConexao();
 			entityManager.getTransaction().begin();
 			LivroEntity livro = new LivroEntity();
 			try {
