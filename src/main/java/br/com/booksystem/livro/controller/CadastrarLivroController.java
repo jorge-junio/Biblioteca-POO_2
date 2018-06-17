@@ -1,4 +1,4 @@
-package br.com.siga.livro.controller;
+package br.com.booksystem.livro.controller;
 
 import java.text.ParseException;
 
@@ -6,10 +6,10 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.com.siga.model.LivroModel;
-import br.com.siga.repository.LivroRepository;
-import br.com.siga.usuario.controller.UsuarioController;
-import br.com.siga.uteis.Uteis;
+import br.com.booksystem.model.LivroModel;
+import br.com.booksystem.repository.LivroRepository;
+import br.com.booksystem.usuario.controller.UsuarioController;
+import br.com.booksystem.uteis.Uteis;
 
 //import org.junit.Test;
 

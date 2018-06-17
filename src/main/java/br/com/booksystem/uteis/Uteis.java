@@ -1,4 +1,4 @@
-package br.com.siga.uteis;
+package br.com.booksystem.uteis;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -16,7 +16,7 @@ public class Uteis {
 		return conexao;
 	}
 
-	public static EntityManagerFactory JpaEntityManager(){
+	public static synchronized EntityManagerFactory JpaEntityManager(){
 		if (EMF == null){
 			EMF = Persistence.createEntityManagerFactory("unit_app");
 		}

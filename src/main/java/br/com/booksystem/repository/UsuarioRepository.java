@@ -1,12 +1,12 @@
-package br.com.siga.repository;
+package br.com.booksystem.repository;
 
 import java.io.Serializable;
 
 import javax.persistence.Query;
  
-import br.com.siga.model.UsuarioModel;
-import br.com.siga.repository.entity.UsuarioEntity;
-import br.com.siga.uteis.Uteis;
+import br.com.booksystem.model.UsuarioModel;
+import br.com.booksystem.repository.entity.UsuarioEntity;
+import br.com.booksystem.uteis.Uteis;
 
  
 public class UsuarioRepository implements Serializable {

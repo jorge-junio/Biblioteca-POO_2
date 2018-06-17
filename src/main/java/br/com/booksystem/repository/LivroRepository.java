@@ -1,4 +1,4 @@
-package br.com.siga.repository;
+package br.com.booksystem.repository;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -10,11 +10,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.Query;
 
-import br.com.siga.model.LivroModel;
-import br.com.siga.model.UsuarioModel;
-import br.com.siga.repository.entity.LivroEntity;
-import br.com.siga.repository.entity.UsuarioEntity;
-import br.com.siga.uteis.Uteis;
+import br.com.booksystem.model.LivroModel;
+import br.com.booksystem.model.UsuarioModel;
+import br.com.booksystem.repository.entity.LivroEntity;
+import br.com.booksystem.repository.entity.UsuarioEntity;
+import br.com.booksystem.uteis.Uteis;
 //import org.junit.Test;
 
 public class LivroRepository {

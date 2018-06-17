@@ -1,4 +1,4 @@
-package br.com.siga.filters;
+package br.com.booksystem.filters;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
  
-import br.com.siga.model.UsuarioModel;
+import br.com.booksystem.model.UsuarioModel;
  
 @WebFilter("/sistema/*")
 public class AutenticacaoFilter implements Filter {

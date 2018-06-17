@@ -1,4 +1,4 @@
-package br.com.siga.repository.entity;
+package br.com.booksystem.repository.entity;
 
 import java.io.Serializable;
 

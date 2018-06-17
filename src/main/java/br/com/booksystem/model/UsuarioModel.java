@@ -1,4 +1,4 @@
-package br.com.siga.model;
+package br.com.booksystem.model;
 
 import java.io.Serializable;
 

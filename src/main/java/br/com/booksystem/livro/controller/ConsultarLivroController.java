@@ -1,4 +1,4 @@
-package br.com.siga.livro.controller;
+package br.com.booksystem.livro.controller;
 
 import java.io.Serializable;
 import java.text.ParseException;
@@ -10,8 +10,8 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
  
-import br.com.siga.model.LivroModel;
-import br.com.siga.repository.LivroRepository;
+import br.com.booksystem.model.LivroModel;
+import br.com.booksystem.repository.LivroRepository;
 //import org.junit.Test;..
 
 @Named(value="consultarlivroController")
