@@ -23,9 +23,10 @@
 	 		 	<h:panelGrid id="panelGrid-campos-form" columns="2" cellpadding="10">
  
 	 		 			<p:outputLabel value="Ano" for="inputText-ano"/>
-	            		<p:inputText id="inputText-ano" 
+	            		<p:inputMask id="inputText-ano" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.ano}"
+	            				  mask="9999"
 	            				  required="true"
 	            				  requiredMessage="O ano é de preenchimento obrigatório"/>
 	            				  
@@ -61,9 +62,10 @@
 	            		
 	            		
 	            		<p:outputLabel value="Isbn" for="inputText-isbn"/>
-	            		<p:inputText id="inputText-isbn" 
+	            		<p:inputMask id="inputText-isbn" 
 	            				  style="width:300px" maxlength="70" 
 	            				  value="#{cadastrarlivroController.livroModel.isbn}"
+	            				  mask="999-99-999-9999-9"
 	            				  required="true"
 	            				  requiredMessage="O isbn é de preenchimento obrigatório"/>
 	            				  
